@@ -1,12 +1,11 @@
 <template lang="pug">
-div.container
-  div.columns
-    div.column.is-two-fifths.column-left
-      article-feature-item(size="big")
-    div.column.is-three-fifths.column-right
-      article-feature-item(size="small" class="item")
-      article-feature-item(size="small" class="item")
-      article-feature-item(size="small" class="item")
+div.columns
+  div.column.is-two-fifths.column-left
+    article-feature-item(size="big")
+  div.column.is-three-fifths.column-right
+    article-feature-item(size="small" class="item")
+    article-feature-item(size="small" class="item")
+    article-feature-item(size="small" class="item")
 </template>
 
 <script>
