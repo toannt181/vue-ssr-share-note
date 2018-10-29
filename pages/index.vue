@@ -1,36 +1,29 @@
 <template lang="pug">
-div.page
-  app-header
+.container
   article-feature
   article-time-line
-  button-action(@click="toggleModal")
-  modal-article(v-if="isShowModal" @close="toggleModal")
+  button-action(@click="redirectToNewStory")
 </template>
 
 <script>
 import Vue from 'vue'
-import AppHeader from '@/components/AppHeader'
 import ArticleFeature from '@/components/ArticleFeature'
 import ArticleTimeLine from '@/components/ArticleTimeLine'
 import ButtonAction from '@/components/ButtonAction'
-import ModalArticle from '@/components/ModalArticle'
 
 export default {
   name: 'Home',
-  components: { AppHeader, ArticleFeature, ArticleTimeLine, ButtonAction, ModalArticle },
-  data() {
-    return { isShowModal: false }
-  },
+  components: { ArticleFeature, ArticleTimeLine, ButtonAction },
   methods: {
-    toggleModal() {
-      this.isShowModal = !this.isShowModal
+    redirectToNewStory() {
+      this.$router.push('/newstory')
     },
   },
 }
 </script>
 
 <style lang="scss" scoped>
-.page {
+.container {
   margin-bottom: 16px;
 }
 </style>

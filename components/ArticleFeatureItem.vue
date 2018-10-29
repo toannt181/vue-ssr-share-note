@@ -8,8 +8,10 @@ div.article(:class="[size]")
     div.actions
       div.author By David Haswell at 12-12-2012
       div
-        i(class="far fa-bookmark icon")
-        i(class="far fa-heart icon")
+        button.btn-icon
+          i(class="far fa-bookmark icon")
+        button.btn-icon
+          i(class="far fa-heart icon")
 </template>
 
 <script>
@@ -68,7 +70,7 @@ export default {
         margin-top: 8px;
         font-size: 12px;
         color: $light-grey;
-      }      
+      }     
     }
   }
   .image {
@@ -107,4 +109,5 @@ export default {
     }
   }
 }
+
 </style>

@@ -1,5 +1,5 @@
 <template lang="pug">
-div.container
+div
   article-feature-item(size="small" class="item")
   article-feature-item(size="small" class="item")
   article-feature-item(size="small" class="item")

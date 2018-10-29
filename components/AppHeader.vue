@@ -1,13 +1,14 @@
 <template lang="pug">
-div.header.columns
-  div.column.is-3.brand.container LogoBrand
-  div.column.header-nav
+.header.columns
+  .column.is-3.brand LogoBrand
+  .column.header-nav
     input.input.input-search(placeholder="Search")
-    div.nav-list
-      div.nav-item News
-      div.nav-item Public
-      div.nav-item Private
-    div
+    .nav-list
+      nuxt-link(to="/")
+        .nav-item Trending
+      nuxt-link(to="/collection")
+        .nav-item Collections
+    .avatar
       user-avatar(:name="name" :color="color")
 </template>
 
@@ -36,7 +37,6 @@ export default {
     border-right: 1px solid $super-light-grey;
   }
   &-nav {
-    padding: 45px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,6 +53,9 @@ export default {
         margin-right: 60px;
         padding: 8px;
       }
+    }
+    .avatar {
+      padding: 8px;
     }
   }
 }
