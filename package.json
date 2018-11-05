@@ -10,20 +10,31 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint"
+    "precommit": "npm run lint",
+    "build_server": "babel server -d dist_server",
+    "server": "nodemon --exec babel-node server/index.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "bulma": "^0.7.1",
-    "nuxt": "^1.0.0"
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mysql2": "^1.6.1",
+    "nuxt": "^1.0.0",
+    "sequelize": "^4.41.0"
   },
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^5.3.1",
+    "babel-cli": "^6.26.0",
     "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.7.0",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-vue": "^4.0.0",
+    "morgan": "^1.9.1",
     "node-sass": "^4.9.3",
+    "nodemon": "^1.18.5",
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
     "sass-loader": "^7.1.0",

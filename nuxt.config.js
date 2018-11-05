@@ -41,7 +41,6 @@ module.exports = {
   plugins: [],
   serverMiddleware: [
     // Will register file from project api directory to handle /api/* requires
-    { path: '/api', handler: '@/api' },
   ]
 }
 
